@@ -38,7 +38,13 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'));
 const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
 
+//Inventario Activos
+
+const test = React.lazy(()=> import('./views/inventarioActivos/test'));
+
 const routes = [
+  { path: '/inventarioActivos/test', exact: true, name: 'test',component: test },
+
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', name: 'Theme', component: Colors, exact: true },
